@@ -89,6 +89,6 @@ animal_service.given("an alligator named Mary exists").
     })
 ```
 
-Like regular expressions, `SomethingLike` is a Ruby specific feature, and will only work if your provider is also a Ruby project. Type based matching will be incorporated as part of the v2 Pact Specification, and will then be cross language compatible.
+Like regular expressions, `SomethingLike` is a Ruby specific feature, and will only work if your provider is also a Ruby project, or you are using [pact-provider-proxy] to verify. Type based matching will be incorporated as part of the v2 Pact Specification, and will then be cross language compatible.
 
 [pact-provider-proxy]: https://github.com/bethesque/pact-provider-proxy
