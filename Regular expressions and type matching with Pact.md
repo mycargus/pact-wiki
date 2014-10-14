@@ -43,7 +43,7 @@ The `matcher` will be used to ensure that the actual request query was in the ri
 You can use `Pact::Term` for request and response header values, the request query, and inside request and response bodies. Note that regular expressions can only be used on Strings, and that (currently) the request query is just matched as normal String - no flexible ordering of parameters is catered for. 
 
 
-<a name="footnote">**</a> (Unfortunately, this technique involves serialising Ruby specific JSON, so it can't be used with any of the other Pact implementations. Hang around for v2 of the [Pact Specification](https://github.com/bethesque/pact-specification) for cross language regular expressions.)
+<a name="footnote">**</a> (Unfortunately, this technique involves serialising Ruby specific JSON, so it can't be used with any of the other Pact implementations. You will need to use [pact-provider-proxy][pact-provider-proxy] to verify against non Ruby servers. Hang around for v2 of the [Pact Specification](https://github.com/bethesque/pact-specification) for cross language regular expressions.)
 
 # Type matching
 
@@ -90,3 +90,5 @@ animal_service.given("an alligator named Mary exists").
 ```
 
 Like regular expressions, `SomethingLike` is a Ruby specific feature, and will only work if your provider is also a Ruby project. Type based matching will be incorporated as part of the v2 Pact Specification, and will then be cross language compatible.
+
+[pact-provider-proxy]: https://github.com/bethesque/pact-provider-proxy
