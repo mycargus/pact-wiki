@@ -53,7 +53,7 @@ GET /visitors?animal=zebra&height=tall&colour=white&colour=black
 will be rejected, as zebras are black and white,  not white and black.
 
 
-More complex cases can be handled by using Pact::Term (*), which allows to provide a regular expression. In the example below, any word will be accepted for height.
+More complex cases can be handled by using Pact::Term [**](#footnote), which allows to provide a regular expression. In the example below, any word will be accepted for height.
 ```ruby
     query: { 
       animal: "zebra", 
