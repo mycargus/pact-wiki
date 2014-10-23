@@ -88,4 +88,4 @@ Note: most tools set the content type to 'application/x-www-form-urlencoded' whe
 
 Note2: some servers accept form-data when it is provided as query instead of body. Pact makes the distinction between body and parameters. 
 
-(*) Pact::Term are described in details [here](Regular-expressions-and-type-matching-with-Pact). Note there are no restrictions in using Pact::Term in the queries or in the body request as mentioned here. However, when using Pact::Term in the body of the answer, then pact verification is limited to the ruby implementation or using [pact-provider-proxy]: https://github.com/bethesque/pact-provider-proxy
+<a name="footnote">**</a> Pact::Term are described in details [here](Regular-expressions-and-type-matching-with-Pact). Note there are no restrictions in using Pact::Term in the queries or in the body request as mentioned here. However, when using Pact::Term in the body of the answer, then pact verification is limited to the ruby implementation or using [pact-provider-proxy]: https://github.com/bethesque/pact-provider-proxy
