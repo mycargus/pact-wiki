@@ -1,7 +1,7 @@
 # Regular expressions
 Sometimes you will have keys in a request or response with values that are hard to know beforehand - timestamps and generated IDs are two examples.
 
-What you need is a way to say "I expect something matching this regular expression, but I don't care what the actual value is". If you are using the Ruby implementation of Pact for both the Consumer and the Provider, then you are in luck! [**](#footnote)
+What you need is a way to say "I expect something matching this regular expression, but I don't care what the actual value is". If you are using the Ruby implementation of Pact for both the Consumer and the Provider, or if you are using regular expressions only in the request part and not the answer, then you are in luck! [**](#footnote)
 
 ```ruby
 animal_service.given("an alligator named Mary exists").
@@ -40,10 +40,10 @@ animal_service.given("an alligator named Mary exists").
 
 The `matcher` will be used to ensure that the actual request query was in the right format, and the value specified in the `generate` field will be the one that is replayed against the provider as an example of what a real value would look like. This means that your provider states can still use known values to set up their data, but your Consumer tests can generate data on the fly.
 
-You can use `Pact::Term` for request and response header values, the request query, and inside request and response bodies. Note that regular expressions can only be used on Strings, and that (currently) the request query is just matched as normal String - no flexible ordering of parameters is catered for. 
+You can use `Pact::Term` for request and response header values, the request query, and inside request and response bodies. Note that regular expressions can only be used on Strings. Furthermore, request queries, when specified as strings are just matched as normal String - no flexible ordering of parameters is catered for. For flexible ordering, specify it as a Hash, which in turn may include `Pact::Terms`
 
 
-<a name="footnote">**</a> (Unfortunately, this technique involves serialising Ruby specific JSON, so it can't be used with any of the other Pact implementations. You will need to use [pact-provider-proxy][pact-provider-proxy] to verify against non Ruby servers. Hang around for v2 of the [Pact Specification](https://github.com/bethesque/pact-specification) for cross language regular expressions.)
+<a name="footnote">**</a> (Unfortunately, this technique involves serialising Ruby specific JSON, so when using in the response content, it will not work with any of the other Pact implementations. You will need to use [pact-provider-proxy][pact-provider-proxy] to verify against non Ruby servers. Hang around for v2 of the [Pact Specification](https://github.com/bethesque/pact-specification) for cross language regular expressions.)
 
 # Type matching
 
