@@ -57,7 +57,7 @@ More complex cases can be handled by using Pact::Term [**](#footnote), which all
 ```ruby
     query: { 
       animal: "zebra", 
-      height: Pact::Term.New( matcher: /\w/, generate :tall)
+      height: Pact::Term.New(matcher: /\w/, generate: "tall")
 })
 ```
 
