@@ -32,7 +32,7 @@ animal_service.given("an alligator named Mary exists").
       animal: "zebra", 
       height: ["tall"], #single parameters, can be specified as a string or as a 1 element array
       colour: ["black", "white"] #duplicate parameters need to be specified as an array, order will matter
-).
+  ).
   will_respond_with(
     status: 200,
     headers: {"Content-Type" => "application/json"},
@@ -53,10 +53,10 @@ will be rejected, as zebras are black and white, not white and black.
 
 More complex cases can be handled by using a Pact::Term [**](#footnote), which allows you to provide a regular expression. In the example below, any word will be accepted for height.
 ```ruby
-    query: { 
-      animal: "zebra", 
-      height: Pact::Term.New(matcher: /\w/, generate: "tall")
-})
+  query: { 
+    animal: "zebra", 
+    height: Pact::Term.New(matcher: /\w/, generate: "tall")
+  })
 ```
 
 
@@ -77,9 +77,9 @@ If the Content-Type is 'application/x-www-form-urlencoded', then the body will b
             param2: 'penguin'
           }
         }).
-        will_respond_with({
+        will_respond_with(
           status: 200
-      })
+        )
 ```
 
 Note:
