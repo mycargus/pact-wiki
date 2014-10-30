@@ -47,7 +47,7 @@ It should run with all your other tests.
 
 #### Only stub layers beneath where contents of the request body are extracted
 
-If you don't _have_ to stub anything in the provider when running pact:verify, then don't. If you do need to stub something, make sure that you only stub the code that gets executed _after_ the contents of the request body have been extracted and/or validated. Otherwise, you could send any old garbage in a `POST` or `PUT` body, and your provider wouldn't even notice.
+If you don't _have_ to stub anything in the provider when running `pact:verify`, then don't. If you do need to stub something (eg. a downstream system), make sure that you only stub the code that gets executed _after_ the contents of the request body have been extracted and validated. Otherwise, you could send any old garbage in a `POST` or `PUT` body, and no test would fail.
 
 #### Stub calls to downstream systems
 
