@@ -29,9 +29,11 @@ Sure, you've checked that your client deserialises the HTTP response into the Al
 
 #### Always put expectations on the response body of a PUT, POST or PATCH
 
-Each interaction is tested in isolation, meaning you can't do a PUT/POST/PATCH, and then follow it with a GET to ensure that the values you sent were actually read successfully by the provider. If you send a `lastname` instead of a `surname` field, a provider will most likely ignore the misnamed field, and return a 200, failing to alert you to the fact that your `lastname` has gone to the big /dev/null in the sky.
+Each interaction is tested in isolation, meaning you can't do a PUT/POST/PATCH, and then follow it with a GET to ensure that the values you sent were actually read successfully by the provider. For example, if you send a `lastname` instead of a `surname` field, a provider will most likely ignore the misnamed field, and return a 200, failing to alert you to the fact that your `lastname` has gone to the big /dev/null in the sky.
 
 To ensure you don't have a Garbage In Garbage Out situation, expect the response body to contain the newly updated values of the resource, and all will be well.
+
+If, for performance reasons, you don't want to include the updated resource in the response, another way to avoid GIGO is to use a shared fixture between a GET response body, and a PUT/POST request body. That way, you know that what you are PUTing or POSTing is also something that you can be GETing.
 
 ## In your provider project
 
