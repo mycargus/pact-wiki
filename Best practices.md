@@ -19,21 +19,21 @@ Why? If you use Pact for integrated tests, you will drive yourself nuts. You wil
 
 See [Sharing pacts between consumer and provider](Sharing-pacts-between-consumer-and-provider) for options to implement this.
 
-#### Ensure all calls to the provider go through methods that have been tested with Pact
+#### Ensure all calls to the provider go through classes that have been tested with Pact
 
-Do not hand create any HTTP requests directly in your consumer app. Testing through a client class gives you the assurance that your consumer app will be creating exactly the HTTP requests that you think it should.
+Do not hand create any HTTP requests directly in your consumer app. Testing through a client class (a class with the sole responsibility of handling the HTTP interactions with the provider) gives you much more assurance that your consumer app will be creating the HTTP requests that you think it should.
 
 #### Ensure the models you use in other tests could actually be created from the responses you expect
 
 Sure, you've checked that your client deserialises the HTTP response into the Alligator you expect, but then you need to make sure when you create an Alligator another test, that you create it with valid attributes  (eg. is the Alligator's `last_login_time` a Time or a DateTime?). One way to do this is to use factories or fixtures to create the models for all your tests. See this [gist](https://gist.github.com/bethesque/69ae590e8312523e5337) for a more detailed explanation.
 
-#### Always put expectations on the response body of a PUT, POST or PATCH
+#### Always set expectations on the response body of a PUT, POST or PATCH
 
 Each interaction is tested in isolation, meaning you can't do a PUT/POST/PATCH, and then follow it with a GET to ensure that the values you sent were actually read successfully by the provider. For example, if you send a `lastname` instead of a `surname` field, a provider will most likely ignore the misnamed field, and return a 200, failing to alert you to the fact that your `lastname` has gone to the big /dev/null in the sky.
 
 To ensure you don't have a Garbage In Garbage Out situation, expect the response body to contain the newly updated values of the resource, and all will be well.
 
-If, for performance reasons, you don't want to include the updated resource in the response, another way to avoid GIGO is to use a shared fixture between a GET response body, and a PUT/POST request body. That way, you know that what you are PUTing or POSTing is also something that you can be GETing.
+If, for performance reasons, you don't want to include the updated resource in the response, another way to avoid GIGO is to use a shared fixture between a GET response body, and a PUT/POST request body. That way, you know that the fields you are PUTing or POSTing are also the fields that you can be GETing.
 
 ## In your provider project
 
