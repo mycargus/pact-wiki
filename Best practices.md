@@ -33,7 +33,7 @@ Each interaction is tested in isolation, meaning you can't do a PUT/POST/PATCH, 
 
 To ensure you don't have a Garbage In Garbage Out situation, expect the response body to contain the newly updated values of the resource, and all will be well.
 
-If, for performance reasons, you don't want to include the updated resource in the response, another way to avoid GIGO is to use a shared fixture between a GET response body, and a PUT/POST request body. That way, you know that the fields you are PUTing or POSTing are also the fields that you can be GETing.
+If, for performance reasons, you don't want to include the updated resource in the response, another way to avoid GIGO is to use a shared fixture between a GET response body, and a PUT/POST request body. That way, you know that the fields you are PUTing or POSTing are the same fields that you can be GETing.
 
 ## In your provider project
 
