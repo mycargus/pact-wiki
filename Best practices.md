@@ -2,6 +2,17 @@
 
 ## In your consumer project
 
+### Use Pact for unit tests, use something else for integration tests
+
+Use Pact:
+
+1. as a _mock_ (calls to mocks are verified after a test) not a stub (calls to stubs are not verified). Using Pact as a stub defeats the purpose of using Pacts.
+2. for _isolated tests_ (ie. unit tests) of the class(es) that will be responsible for making the HTTP calls from your consumer application to your provider application, not for integrated tests of your entire consumer codebase.
+
+Use something else (eg. Webmock):
+
+1. to stub out the provider for any sort of integrated tests in your consumer codebase. The key is to use a shared fixture (eg. a shared JSON file) between the stubbed tests, and the Pact tests, to ensure that any response you send back from the stub is one that will be verified against the real provider.
+
 #### Make the latest pact available to the provider via a URL
 
 See [Sharing pacts between consumer and provider](Sharing-pacts-between-consumer-and-provider) for options to implement this.
