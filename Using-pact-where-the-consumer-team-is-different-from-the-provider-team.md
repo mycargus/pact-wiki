@@ -4,6 +4,7 @@
 * It's very important for the consumer team to know when pact verification fails, because it means they cannot deploy the consumer. If the consumer team is using a different CI instance from the provider team, consider how you might communicate to the consumer team when pact verification has failed. You should do one of the following:
  * Configure the pact verification build to send an email to the consumer team when the build fails.
  * Even better, if you can, have a copy of the provider build run on the consumer CI that just runs the unit tests and pact verification. That way the consumer team has the same red build that the provider team has, and it gives them a vested interest in keeping it green.
+* Use a URL that you know the latest pact will be made available at. Do not rely on manual intervention (eg. someone copying a file across to the provider project) because this process will inevitably break down, and your verification task will give you a false positive. Do not try to "protect" your build from being broken by instigating a manual pact update process. `pact:verify` is the canary of your integration - manual updates would be like giving your canary a gas mask.
 
 # How to develop new functionality while keeping all the builds green
 See [Development workflow](Development-workflow)
