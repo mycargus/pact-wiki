@@ -5,3 +5,5 @@ _Be conservative in what you send_ - when the mock server in the consumer projec
 The exception to this is the request headers - we have found that frameworks tend to add their own headers, and that maintaining these can be extremely tedious, so be aware that if you are using a header that will change the behaviour of the provider, you _must_ specify it in your expectations.
 
 _Be liberal in what you accept_ - when verifying a pact in the provider project, the response body and headers may contain fields that were not defined in the expectations, on the assumption that any extra field will be ignored by your consumer. This allows a provider to evolve without breaking existing consumers (unlike the bad old WSDL days).
+
+The gotcha here is that if you expect an empty hash in your body somewhere, this actually means "allow a hash with any values here". You cannot expect a field to _not_ be present.
