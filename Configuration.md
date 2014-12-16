@@ -1,0 +1,1 @@
+See the [Configuration](https://github.com/realestate-com-au/pact/blob/master/documentation/configuration.md) page in the repository.
