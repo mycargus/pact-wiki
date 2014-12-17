@@ -75,7 +75,7 @@ For request matching, the mock server will allow any values of the same type to 
 animal_service.given("an alligator named Mary exists").
   upon_receiving("a request to update an alligator").
   with(
-    get: "put",
+    method: "put",
     path: "/alligators/Mary", 
     headers: {"Accept" => "application/json"},
     body: {
@@ -90,5 +90,44 @@ animal_service.given("an alligator named Mary exists").
 ```
 
 Like regular expressions, `SomethingLike` is a Ruby specific feature, and will only work if your provider is also a Ruby project, or you are using [pact-provider-proxy] to verify. Type based matching will be incorporated as part of the v2 Pact Specification, and will then be cross language compatible.
+
+# Specifying query params
+
+Query params can be specified as a string or a hash.
+When specified as a string, an exact match will be performed. You may use a Pact::Term, but only over the query string as a whole. Note that the query params must already be URL encoded in the expectation. (This will change for v2 matching.)
+
+```ruby
+
+animal_service.given("some alligators exist").
+  upon_receiving("a request to search for alligators").
+  with(
+    method: "get",
+    path: "/alligators",
+    query: "name=Mary+Jane&age=8")
+  ...
+    
+```
+
+Alternatively, if the order of the query parameters does not matter, you can specify the query as a hash. You can embed Pact::Terms or Pact::SomethingLike inside the hash. Remember that all query params will be parsed to strings, so don't use a SomethingLike with a number.
+
+```ruby
+
+animal_service.given("some alligators exist").
+  upon_receiving("a request to search for alligators").
+  with(
+    method: "get",
+    path: "/alligators",
+    query: {
+      # No need to encode params in the hash
+      name: 'Mary Jane',
+      age: '8',
+      # Specify a param with multiple values using an 
+      # array - order will be enforced
+      children: ['Betty', 'Sue'] 
+    })
+  ...
+    
+```
+
 
 [pact-provider-proxy]: https://github.com/bethesque/pact-provider-proxy
