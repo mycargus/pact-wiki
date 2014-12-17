@@ -91,7 +91,7 @@ animal_service.given("an alligator named Mary exists").
 
 Like regular expressions, `SomethingLike` is a Ruby specific feature, and will only work if your provider is also a Ruby project, or you are using [pact-provider-proxy] to verify. Type based matching will be incorporated as part of the v2 Pact Specification, and will then be cross language compatible.
 
-# Specifying query params
+# Query params
 
 Query params can be specified as a string or a hash.
 When specified as a string, an exact match will be performed. You may use a Pact::Term, but only over the query string as a whole. Note that the query params must already be URL encoded in the expectation. (This will change for v2 matching.)
