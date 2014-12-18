@@ -11,7 +11,7 @@ Use Pact:
 
 Use something else (eg. Webmock):
 
-1. to stub out the provider for any sort of integrated tests in your consumer codebase. The key is to use a shared fixture (eg. a shared JSON file) between the stubbed tests, and the Pact tests, to ensure that any response you send back from the stub is one that will be verified against the real provider.
+1. to stub out the provider for any sort of functional or integrated tests within your consumer codebase. The key is to use a shared fixture (eg. a shared JSON file) between the stubbed tests, and the Pact tests, to ensure that any response you send back from the stub is one that will be verified against the real provider.
 
 Why? If you use Pact for integrated tests, you will drive yourself nuts. You will have very brittle consumer tests, as Pact checks every outgoing path, JSON node, query param and header. You will also end up with a cartesian explosion of interactions that need to be verified on the provider side. This will increase the amount of time you spend getting your provider tests to pass, without usefully increasing the amount of test coverage.
 
