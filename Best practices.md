@@ -2,7 +2,7 @@
 
 ## In your consumer project
 
-### Use Pact for unit tests, use something else for integration tests
+### Use Pact for unit tests, use something else for functional tests
 
 Use Pact:
 
