@@ -4,3 +4,4 @@
 * [A microservices implementation retrospective](http://techblog.realestate.com.au/a-microservices-implementation-retrospective/) - Sep 2014
 * [SE Radio](http://www.se-radio.net/2014/10/episode-213-james-lewis-on-microservices/) - Oct 2014
 * [Microservices testing slidedeck](http://martinfowler.com/articles/microservice-testing/#testing-contract-diagram) - Dec 2014
+* [Simplifying microservices testing with pacts](http://dius.com.au/2014/05/19/simplifying-micro-service-testing-with-pacts/) - May 2014
