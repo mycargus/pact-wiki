@@ -1,20 +1,24 @@
 Welcome to the pact wiki!
 
-## Index
-* [Terminology](Terminology)
-* [Provider states](Provider-states)
+## Wordy things
 * [Frequently asked questions](FAQ)
 * [Rarely asked questions](RAQ)
-* [Sharing pacts between consumer and provider](Sharing-pacts-between-consumer-and-provider)
+* [Terminology](Terminology)
+* [[News, blogs and articles]]
+
+## Techy things
+* [Provider states](Provider-states)
 * [Regular expressions and type matching with Pact](Regular-expressions-and-type-matching-with-Pact)
-* [Best practices](Best-practices)
 * [[Configuration]]
-* [Development workflow](Development-workflow)
 * [Troubleshooting](Troubleshooting)
 * [[Understanding Request Matching]]
+
+### Processey things
+* [Development workflow](Development-workflow)
+* [Best practices](Best-practices)
+* [Sharing pacts between consumer and provider](Sharing-pacts-between-consumer-and-provider)
 * [Using pact where the consumer team is different from the provider team](Using-pact-where-the-consumer-team-is-different-from-the-provider-team)
 * [Testing with pact diagram](Testing with pact.png)
-* [[News, blogs and articles]]
 
 ## Contributing
 
