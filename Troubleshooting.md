@@ -12,7 +12,7 @@
 
 ### Show full backtrace for pact:verify
 
-Add `BACKTRACE=true` to the `rake pact:verify` command (you'll probably want to set the `PACT_DESCRIPTION` and `PACT_PROVIDER_STATE` environment variables too so that you don't have to trawl through every backtrace for every interaction in your pact at once).
+If `pact:verify` is failing with an exception other than a normal "match" failure, but you can't see enough of the backtrace to diagnose the issue, you can turn the full backtrace display on by adding `BACKTRACE=true` to the `rake pact:verify` command (you'll probably want to use the `PACT_DESCRIPTION` and `PACT_PROVIDER_STATE` environment variables too so that you don't have to trawl through every backtrace for every interaction in your pact at once).
 
     $ bundle exec rake pact:verify BACKTRACE=true
 
