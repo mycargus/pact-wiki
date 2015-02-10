@@ -7,7 +7,8 @@ Pact.configure do | config |
 end
 ```
 
-Example:
+An example of the generated documentation follows:
+* * *
 
 ### A pact between Zoo App and Animal Service
 
