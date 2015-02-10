@@ -7,6 +7,7 @@ Welcome to the pact wiki!
 * [[News, blogs and articles]]
 
 ## Techy things
+* [[Gotchas]] - things you should know about how Pact works that might cause problems if you don't understand them.
 * [Provider states](Provider-states)
 * [Regular expressions and type matching with Pact](Regular-expressions-and-type-matching-with-Pact)
 * [[Configuration]]
