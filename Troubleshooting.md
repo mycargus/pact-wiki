@@ -9,15 +9,9 @@
 * Try using a different [diff formatter][diff-formatter]. Different people find the different formats easier to interpret.
 
 ## Provider
+
 ### Show full backtrace for pact:verify
 
-Add the following to your `pact_helper.rb`
-
-```ruby
-RSpec.configure do |config|
-  config.full_backtrace = true
-end
-
-```
+    $ bundle exec rake pact:verify BACKTRACE=true
 
 [diff-formatter]: https://github.com/realestate-com-au/pact/blob/master/documentation/configuration.md#diff_formatter
