@@ -10,6 +10,7 @@ Welcome to the pact wiki!
 * [Best practices](Best-practices)
 * [Development workflow](Development-workflow)
 * [Troubleshooting](Troubleshooting)
+* [[Understanding Request Matching]]
 * [Using pact where the consumer team is different from the provider team](Using-pact-where-the-consumer-team-is-different-from-the-provider-team)
 * [Testing with pact diagram](Testing with pact.png)
 * [[News, blogs and articles]]
