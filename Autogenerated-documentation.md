@@ -7,7 +7,7 @@ Pact.configure do | config |
 end
 ```
 
-If you would like another type of documentation (eg. HTML), you can roll your own, and configure the `doc_generator` with anything that responds to `call` and accepts two String arguments (the pact_dir and the doc_dir). See the [doc](https://github.com/realestate-com-au/pact/tree/master/lib/pact/doc) module in the Pact gem, and the [HTML renderer](https://github.com/bethesque/pact_broker/blob/master/lib/pact_broker/api/renderers/html_pact_renderer.rb) in the Pact Broker for examples.
+If you would like another type of documentation (eg. HTML), you can roll your own, and configure the `doc_generator` with anything that responds to `call` and accepts two String arguments (the `pact_dir` and the `doc_dir`). See the [doc](https://github.com/realestate-com-au/pact/tree/master/lib/pact/doc) module in the Pact gem, and the [HTML renderer](https://github.com/bethesque/pact_broker/blob/master/lib/pact_broker/api/renderers/html_pact_renderer.rb) in the Pact Broker for examples.
 
 
 An example of the generated documentation follows:
