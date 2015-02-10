@@ -8,6 +8,7 @@ Welcome to the pact wiki!
 * [Sharing pacts between consumer and provider](Sharing-pacts-between-consumer-and-provider)
 * [Regular expressions and type matching with Pact](Regular-expressions-and-type-matching-with-Pact)
 * [Best practices](Best-practices)
+* [[Configuration]]
 * [Development workflow](Development-workflow)
 * [Troubleshooting](Troubleshooting)
 * [[Understanding Request Matching]]
