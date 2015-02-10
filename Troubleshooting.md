@@ -12,6 +12,8 @@
 
 ### Show full backtrace for pact:verify
 
+Add `BACKTRACE=true` to the `rake pact:verify` command (you'll probably want to set the `PACT_DESCRIPTION` and `PACT_PROVIDER_STATE` environment variables too so that you don't have to trawl through every backtrace for every interaction in your pact).
+
     $ bundle exec rake pact:verify BACKTRACE=true
 
 [diff-formatter]: https://github.com/realestate-com-au/pact/blob/master/documentation/configuration.md#diff_formatter
