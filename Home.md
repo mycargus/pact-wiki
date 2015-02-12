@@ -29,6 +29,11 @@ Welcome to the pact wiki!
 * [Javascript (consumer)](https://github.com/DiUS/pact-consumer-js-dsl)
 * [Javascript (provider)](https://github.com/DiUS/pact-provider-js-dsl)
 
+## Example codebases
+
+* [microservices-pact](https://github.com/mstine/microservices-pact) - Uses Pact JVM and Spring Boot.
+* [pact_broker-client](https://github.com/bethesque/pact_broker-client/tree/master/spec/service_providers) - confusingly enough, the Pact Broker Client has a Pact with the Pact Broker... meta...
+
 ## Contributing
 
 Want to help out with the documentation? Have ideas you want to contribute? Github wikis don't support pull requests, but you can raise an issue with a diff (wikis can be cloned like normal repos), or you can follow this process http://fusiongrokker.com/post/how-you-can-contribute-to-taffy-documentation
