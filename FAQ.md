@@ -10,6 +10,10 @@ Whether you define a schema or not, you will still need a concrete example of th
 
 * Provider states: Dynamically setting expectations on the mock server allows the use of provider states, meaning you can make the same request in different tests, with different expected responses. This allows you to properly test all the code paths in your consumer (eg. with different response codes, or different states of the resource). If all the interactions were loaded at start up from a static file, the mock server wouldn't know which response to return. See this [gist](https://gist.github.com/bethesque/7fa8947c107f92ace9a4) as an example.
 
+### What does PACT stand for?
+
+It doesn't stand for anything. It is another word for a "contract". Google defines a "pact" as "a formal agreement between individuals or parties." That sums it up pretty well.
+
 ### How does Pact differ from VCR?
 
 Pact is like VCR in reverse. VCR records actual provider behaviour, and verifies that the consumer behaves as expected. Pact records consumer behaviour, and verifies that the provider behaves as expected. The advantages Pact provides are:
