@@ -31,8 +31,9 @@ Welcome to the pact wiki!
 
 ## Example codebases
 
-* [microservices-pact](https://github.com/mstine/microservices-pact) - Uses Pact JVM and Spring Boot.
 * [pact_broker-client](https://github.com/bethesque/pact_broker-client/tree/master/spec/service_providers) - confusingly enough, the Pact Broker Client has a Pact with the Pact Broker... meta...
+* [microservices-pact](https://github.com/mstine/microservices-pact) - Uses Pact JVM and Spring Boot.
+
 
 ## Contributing
 
