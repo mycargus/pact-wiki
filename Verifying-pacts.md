@@ -67,9 +67,9 @@ Pact.service_provider "My Service Provider" do
 end
 ```
 
-To verify a pact from a URL that requires basic auth, add `{username: '...', password: '...'}` as options.
+To verify a pact from a URL that requires basic auth, add username and password options:
 
-```
+```ruby
   pact_uri 'http://...', {username: '...', password: '...'}
 ```
 
