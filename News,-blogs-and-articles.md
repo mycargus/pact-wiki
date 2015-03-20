@@ -1,3 +1,4 @@
+* [The Odyssey from Monoliths to Microservices](https://yow.eventer.com/yow-2014-1222/the-odyssey-from-monoliths-to-microservices-at-realestate-com-au-by-beth-skurrie-and-evan-bottcher-and-jon-eaves-1751) - Dec 2014
 * [Pacts to the rescue!](https://www.youtube.com/watch?v=KwpDu9SuAbI) (Video) - Dec 2014
 * [Microservices testing with Pact-Net](https://www.youtube.com/watch?v=SMadH_ALLII) (Video) - Dec 2014
 * [Microservices testing slidedeck](http://martinfowler.com/articles/microservice-testing/#testing-contract-diagram) - Dec 2014
