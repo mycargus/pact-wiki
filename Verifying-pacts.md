@@ -67,6 +67,12 @@ Pact.service_provider "My Service Provider" do
 end
 ```
 
+To verify a pact from a URL that requires basic auth, add `{username: '...', password: '...'}` as options.
+
+```
+  pact_uri 'http://...', {username: '...', password: '...'}
+```
+
 ## Verifying a pact at any URL using rake pact:verify:at
 
 You can verify a pact at any arbitrary local or remote URL using the `pact:verify:at` task.
