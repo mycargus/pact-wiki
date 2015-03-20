@@ -9,6 +9,7 @@ Welcome to the pact wiki!
 ## Techy things
 * [[Matching gotchas]] - things you should know about how Pact works that might cause problems if you don't understand them.
 * [Provider states](Provider-states)
+* [[Verifying pacts]]
 * [Regular expressions and type matching with Pact](Regular-expressions-and-type-matching-with-Pact)
 * [[Configuration]]
 * [[Understanding Request Matching]]
