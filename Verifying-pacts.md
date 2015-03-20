@@ -81,6 +81,7 @@ This is useful when you are developing the consumer and provider concurrently, a
     $ rake pact:verify:at[../path-to-your-consumer-project/specs/pacts/my_consumer-my_provider.json]
     $ rake pact:verify:at[http://build-box/MyConsumerBuild/latestSuccessful/artifacts/my_consumer-my_provider.json]
 
+With basic auth, set the environment variables `PACT_BROKER_USERNAME` and `PACT_BROKER_PASSWORD`, or use the basic auth URL format, `http://username:password@pactbroker.yourdomain/...`.
 
 ## Using a custom pact:verify task
 
@@ -98,6 +99,8 @@ Pact::VerificationTask.new(:dev) do | task |
   task.uri '../path-to-your-consumer-project/specs/pacts/my_consumer-my_provider.json'
 end
 ```
+
+With basic auth, set the environment variables `PACT_BROKER_USERNAME` and `PACT_BROKER_PASSWORD`, or use the basic auth URL format, `http://username:password@pactbroker.yourdomain/...`.
 
 ## Verifying one interaction at a time
 
