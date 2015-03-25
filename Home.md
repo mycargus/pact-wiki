@@ -29,6 +29,7 @@ Welcome to the pact wiki!
 * [.Net](https://github.com/SEEK-Jobs/pact-net)
 * [Javascript (consumer)](https://github.com/DiUS/pact-consumer-js-dsl)
 * [Javascript (provider)](https://github.com/DiUS/pact-provider-js-dsl)
+* [Swift (consumer)](https://github.com/DiUS/pact-consumer-swift)
 
 ## Example codebases
 
