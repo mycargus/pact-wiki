@@ -8,8 +8,7 @@ Use Pact:
 
 1. as a _mock_ (calls to mocks are verified after a test) not a stub (calls to stubs are not verified). Using Pact as a stub defeats the purpose of using Pacts.
 2. for _isolated tests_ (ie. unit tests) of the class(es) that will be responsible for making the HTTP calls from your consumer application to your provider application, not for integrated tests of your entire consumer codebase.
-
-Think carefully about using Pact before using it stub out the provider for any sort of functional or integrated tests within your consumer codebase.
+3. _carefully_, for any sort of functional or integrated tests within your consumer codebase.
 
 Why? If you use Pact with exact matching for integrated tests, you will drive yourself nuts. You will have very brittle consumer tests, as Pact checks every outgoing path, JSON node, query param and header. You will also end up with a cartesian explosion of interactions that need to be verified on the provider side. This will increase the amount of time you spend getting your provider tests to pass, without usefully increasing the amount of test coverage.
 
