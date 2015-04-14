@@ -15,7 +15,7 @@ Why? If you use Pact with exact matching for integrated tests, you will drive yo
 If you want to use Pact for non-isolated tests (functional, integration tests):
 
 1. Keep your isolated, exact match tests. These will make sure that you're mapping the right data from your domain objects into your requests.
-2. For the integration tests, use loose, [type based matching][type-based-matching] for the requests to avoid brittleness, and pull out the setup into a method that can be shared between tests so that you do not end up with a million interactions to verify. This will help because the interactions collection acts like a set, and discards exact duplicates.
+2. For the integration tests, use loose, [type based matching][type-based-matching] for the requests to avoid brittleness, and pull out the setup into a method that can be shared between tests so that you do not end up with a million interactions to verify (this will help because the interactions collection in the Pact acts like a set, and discards exact duplicates).
 
 #### Make the latest pact available to the provider via a URL
 
