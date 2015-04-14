@@ -9,11 +9,14 @@ Use Pact:
 1. as a _mock_ (calls to mocks are verified after a test) not a stub (calls to stubs are not verified). Using Pact as a stub defeats the purpose of using Pacts.
 2. for _isolated tests_ (ie. unit tests) of the class(es) that will be responsible for making the HTTP calls from your consumer application to your provider application, not for integrated tests of your entire consumer codebase.
 
-Use something else (eg. Webmock):
+Think carefully about using Pact before using it stub out the provider for any sort of functional or integrated tests within your consumer codebase.
 
-1. to stub out the provider for any sort of functional or integrated tests within your consumer codebase (stubs aren't verified). The key is to use a shared fixture (eg. a shared JSON file) between the stubbed tests, and the Pact tests, to ensure that any response you send back from the stub is one that will be verified against the real provider.
+Why? If you use Pact with exact matching for integrated tests, you will drive yourself nuts. You will have very brittle consumer tests, as Pact checks every outgoing path, JSON node, query param and header. You will also end up with a cartesian explosion of interactions that need to be verified on the provider side. This will increase the amount of time you spend getting your provider tests to pass, without usefully increasing the amount of test coverage.
 
-Why? If you use Pact for integrated tests, you will drive yourself nuts. You will have very brittle consumer tests, as Pact checks every outgoing path, JSON node, query param and header. You will also end up with a cartesian explosion of interactions that need to be verified on the provider side. This will increase the amount of time you spend getting your provider tests to pass, without usefully increasing the amount of test coverage.
+If you want to use Pact for non-isolated tests (functional, integration tests):
+
+1. Keep your isolated, exact match tests. These will make sure that you're mapping the right data from your domain objects into your requests.
+2. For the integration tests, use loose, [type based matching][type-based-matching] for the requests to avoid brittleness, and pull out the setup into a method that can be shared between tests so that you do not end up with a million interactions to verify. This will help because the interactions collection acts like a set, and discards exact duplicates.
 
 #### Make the latest pact available to the provider via a URL
 
@@ -52,3 +55,5 @@ If you don't _have_ to stub anything in the provider when running `pact:verify`,
 #### Stub calls to downstream systems
 
 Consider making a separate pact with the downstream system and using shared fixtures.
+
+[type-based-matching]: https://github.com/realestate-com-au/pact/wiki/Regular-expressions-and-type-matching-with-Pact#type-matching
