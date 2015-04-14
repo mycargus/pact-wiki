@@ -1,5 +1,3 @@
-# Pact best practices
-
 ## In your consumer project
 
 ### Use Pact for isolated (unit) tests, think carefully about how you use it for integrated tests
