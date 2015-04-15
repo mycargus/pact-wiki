@@ -37,7 +37,8 @@ Unlike Webmock:
 [Pacto][pacto] is another Ruby implementation of a library that provides a mock service and provider verification using consumer driven contracts. It differs from Pact in the following ways.
 
 * Pacto has the ability to create contracts by recording interactions with an existing service. This makes the contracts easy to set up.
-* Once the Pacto contracts are created, they are static, and are used to verify both the consumer and the provider. Pact's contracts are a dynamically generated artefact. This makes them easier to maintain.
+* Once the Pacto contracts are created, they are static, and are used to verify both the consumer and the provider. This would make it easy to determine whether a broken contract is due to a change in the consumer or a change in the provider.
+* Pact's contracts are dynamically generated artefacts. This makes them easier to maintain.
 * Pact allows you to make the same request with a different "provider state", allowing you to test different HTTP response codes for the same endpoint, or test the same resource in different states.
 * Pact allows you to do regular expression matching.
 * Pact has native support for Ruby, JVM, and .Net consumers, with a Javascript wrapper using the Ruby mock server.
