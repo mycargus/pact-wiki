@@ -14,7 +14,7 @@ Pact.service_consumer "My Service Consumer" do
   end
 end
 ```
-    $ bundle exec pact service -p <port-num>
+    $ bundle exec pact-mock-service -p <port-num>
 
 The service prints messages it recieves to stdout which can be really useful
 when diagnosing issues with pacts.
