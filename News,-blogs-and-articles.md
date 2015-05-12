@@ -1,7 +1,7 @@
 * [The Odyssey from Monoliths to Microservices](https://yow.eventer.com/yow-2014-1222/the-odyssey-from-monoliths-to-microservices-at-realestate-com-au-by-beth-skurrie-and-evan-bottcher-and-jon-eaves-1751) - Dec 2014
 * [Pacts to the rescue!](https://www.youtube.com/watch?v=KwpDu9SuAbI) (Video) - Dec 2014
 * [Microservices testing with Pact-Net](https://www.youtube.com/watch?v=SMadH_ALLII) (Video) - Dec 2014
-* [Microservices testing slidedeck](http://martinfowler.com/articles/microservice-testing/#testing-contract-diagram) - Dec 2014
+* [Microservices testing slidedeck](http://martinfowler.com/articles/microservice-testing/) - Dec 2014
 * [Thoughtworks Tech Radar](https://github.com/realestate-com-au/pact) - Dec 2014
 * [Ruby Rogues](http://rubyrogues.com/176-rr-rails-as-an-soa-client-with-pete-hodgson/) - Oct 2014
 * [SE Radio](http://www.se-radio.net/2014/10/episode-213-james-lewis-on-microservices/) - Oct 2014
