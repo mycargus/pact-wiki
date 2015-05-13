@@ -5,6 +5,7 @@ Welcome to the pact wiki!
 * [Rarely asked questions](RAQ)
 * [Terminology](Terminology)
 * [[News, blogs and articles]]
+* [[Articles on microservices]]
 
 ## Techy things
 * [[Matching gotchas]] - things you should know about how Pact works that might cause problems if you don't understand them.
