@@ -8,6 +8,10 @@
 
 * Try using a different [diff formatter][diff-formatter]. Different people find the different formats easier to interpret.
 
+## Consumer
+
+Check the logs in log/<name>.log for more information that you will see in the UI.
+
 ## Provider
 
 ### Show full backtrace for pact:verify
