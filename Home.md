@@ -31,6 +31,7 @@ Welcome to the pact wiki!
 * [Javascript (consumer)](https://github.com/DiUS/pact-consumer-js-dsl)
 * [Javascript (provider)](https://github.com/DiUS/pact-provider-js-dsl)
 * [Swift (consumer)](https://github.com/DiUS/pact-consumer-swift)
+* [Python](https://github.com/hartror/pypact) - Work in progress
 
 ## Example codebases
 
