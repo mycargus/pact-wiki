@@ -1,5 +1,9 @@
 # Rarely asked questions
 
+### Doesn't this break HAL?
+
+Yes.
+
 ### How can I run a standalone mock server?
 
 By default, a mock service will be started automatically by the pact gem when running the consumer tests. A standalone mock service can be run locally and is useful for debugging purposes.
@@ -19,9 +23,37 @@ end
 The service prints messages it recieves to stdout which can be really useful
 when diagnosing issues with pacts.
 
-### Doesn't this break HAL?
+### How can I specify hooks to be executed before/after all examples for pact:verify?
 
-Yes.
+Use the set_up and tear_down hooks in the provider state definition:
+
+```ruby
+
+Pact.provider_states_for "Some Consumer" do
+
+  set_up do
+    # Set up code here 
+  end
+
+  tear_down do
+    # tear down code here
+  end
+
+end
+```
+
+See https://www.relishapp.com/rspec/rspec-core/docs/hooks/filters for more information.
+
+### How can I run my consumer UI during my consumer specs so I can execute the tests using a browser?
+
+Eg. for Capybara tests
+
+```ruby
+Pact.service_consumer "My Consumer" do
+  app <your rack app here>
+  port 4321
+end
+```
 
 ### How can I specify multiple headers with the same name?
 
