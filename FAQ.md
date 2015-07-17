@@ -2,7 +2,7 @@
 
 ### Why doesn't Pact use JSON Schema?
 
-Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then you would have to generate an example, and generated values are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example. The ability to specify more flexible matching like "an array of any length" that is currently missing from v1 matching will be available in v2 matching (beta is out now, see [v2 flexible matching](https://github.com/realestate-com-au/pact/wiki/v2-flexible-matching)).
+Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then the code would have to generate an example, and generated values are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example. The ability to specify more flexible matching like "an array of any length" that is currently missing from v1 matching will be available in v2 matching (beta is out now, see [v2 flexible matching](https://github.com/realestate-com-au/pact/wiki/v2-flexible-matching)).
 
 ### Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?
 
