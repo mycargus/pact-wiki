@@ -83,7 +83,7 @@ You can verify a pact against any running server, regardless of language, using 
 
 ### How can I create a pact for a consumer that is not Ruby/JVM/.net/Javascript?
 
-Become famous, and write a pact-consumer library yourself! Then let us know about it so we can put a link to it in the documentation.
+Become famous, and write a pact-consumer library yourself! Join the [pact-dev][pact-dev] Google group and have a chat to the other implementors before you start.
 
 ### How can I specify hooks to be executed before/after all examples for pact:verify?
 
@@ -120,3 +120,4 @@ end
 [pacto]: https://github.com/thoughtworks/pacto
 [pact_broker]: https://github.com/bethesque/pact_broker
 [pacto_example]: http://thoughtworks.github.io/pacto/usage/
+[pact-dev]: https://groups.google.com/forum/#!forum/pact-dev
