@@ -85,38 +85,6 @@ You can verify a pact against any running server, regardless of language, using 
 
 Become famous, and write a pact-consumer library yourself! Join the [pact-dev][pact-dev] Google group and have a chat to the other implementors before you start.
 
-### How can I specify hooks to be executed before/after all examples for pact:verify?
-
-Use the set_up and tear_down hooks in the provider state definition:
-
-```ruby
-
-Pact.provider_states_for "Some Consumer" do
-
-  set_up do
-    # Set up code here 
-  end
-
-  tear_down do
-    # tear down code here
-  end
-
-end
-```
-
-See https://www.relishapp.com/rspec/rspec-core/docs/hooks/filters for more information.
-
-### How can I run my consumer UI during my consumer specs so I can execute the tests using a browser?
-
-Eg. for Capybara tests
-
-```ruby
-Pact.service_consumer "My Consumer" do
-  app <your rack app here>
-  port 4321
-end
-```
-
 [pacto]: https://github.com/thoughtworks/pacto
 [pact_broker]: https://github.com/bethesque/pact_broker
 [pacto_example]: http://thoughtworks.github.io/pacto/usage/
