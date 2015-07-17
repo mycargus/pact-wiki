@@ -2,7 +2,17 @@
 
 ### Why doesn't Pact use JSON Schema?
 
-Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then you would have to generate an example, and generated values are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example. The ability to specify more flexible matching like "an array of any length" that is currently missing from v1 matching will be available in v2 matching (WIP).
+Whether you define a schema or not, you will still need a concrete example of the response to return from the mock server, and a concrete example of the request to replay against the provider. If you just used a schema, then you would have to generate an example, and generated values are not very helpful when used in tests, nor do they give any readable, meaningful documentation. If you use a schema *and* an example, then you are duplicating effort. The schema can almost be implied from an example. The ability to specify more flexible matching like "an array of any length" that is currently missing from v1 matching will be available in v2 matching (beta is out now, see [v2 flexible matching](https://github.com/realestate-com-au/pact/wiki/v2-flexible-matching)).
+
+### Why does Pact use concrete JSON documents rather than using more flexible JSONPaths?
+
+Pact was written by a team that was using microservices that had read/write RESTful interfaces. Flexible JSONPaths are useful when reading JSON documents, but no good for creating concrete examples of JSON documents to POST or PUT back to a service.
+
+### Why is there no support for specifying optional attributes?
+
+Firstly, it is assumed that you have control over the provider's data (and consumer's data) when doing the verification tests. If you don't, then maybe Pact is [not the best tool for your situation](https://github.com/realestate-com-au/pact#what-is-it-good-for).
+
+Secondly, if you think about it, if Pact supports making an assertion that element `$.body.name` may be present in a response, then you write consumer code that can handle an optional `$.body.name`, but in fact, the provider gives `$.body.firstname`, no test will ever fail to tell you that you've made an incorrect assumption. Remember that a provider may return extra data without failing the contract, but it must provide at minimum the data you expect.
 
 ### Why are the pacts generated and not static?
 
@@ -12,7 +22,7 @@ Whether you define a schema or not, you will still need a concrete example of th
 
 ### What does PACT stand for?
 
-It doesn't stand for anything. It is another word for a "contract". Google defines a "pact" as "a formal agreement between individuals or parties." That sums it up pretty well.
+It doesn't stand for anything. It is the word "pact", as in, another word for a contract. Google defines a "pact" as "a formal agreement between individuals or parties." That sums it up pretty well.
 
 ### How does Pact differ from VCR?
 
@@ -69,9 +79,9 @@ However, if you have a large and complex provider, you might decide to stub some
 
 ### How can I verify a pact against a non-ruby provider?
 
-You can verify a pact against any running server, regardless of language, using [pact-provider-proxy](https://github.com/bethesque/pact-provider-proxy).
+You can verify a pact against any running server, regardless of language, using [pact-provider-proxy](https://github.com/bethesque/pact-provider-proxy). There is also native support for the [JVM and .net](https://github.com/realestate-com-au/pact/wiki#implementations-in-other-languages).
 
-### How can I create a pact for a consumer that is not ruby or on the JVM?
+### How can I create a pact for a consumer that is not Ruby/JVM/.net/Javascript?
 
 Become famous, and write a pact-consumer library yourself! Then let us know about it so we can put a link to it in the documentation.
 
