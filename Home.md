@@ -4,7 +4,7 @@ Welcome to the pact wiki!
 * [Frequently asked questions](FAQ)
 * [Rarely asked questions](RAQ)
 * [Terminology](Terminology)
-* [[News, blogs and articles]]
+* [[News, blogs, vidoes and articles]]
 * [[Articles on microservices]]
 
 ## Techy things
