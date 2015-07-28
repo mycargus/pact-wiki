@@ -1,6 +1,6 @@
 ## With RSpec
 
-Follow the instructions in the [README](/README.md), this is the default behaviour.
+Follow the instructions in the [README](README.md), this is the default behaviour.
 
 ## With Capybara
 
