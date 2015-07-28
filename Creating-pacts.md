@@ -1,3 +1,7 @@
+## With RSpec
+
+Follow the instructions in the [README](/README.md), this is the default behaviour.
+
 ## With Capybara
 
 Configure your Rack application to be started by Pact, and tell it what port to run on.
