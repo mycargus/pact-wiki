@@ -21,3 +21,8 @@ If `pact:verify` is failing with an exception other than a normal "match" failur
     $ bundle exec rake pact:verify BACKTRACE=true
 
 [diff-formatter]: https://github.com/realestate-com-au/pact/blob/master/documentation/configuration.md#diff_formatter
+
+### Pact verification output is duplicated
+
+Your `pact_helper.rb` file is most likely being required twice.
+
