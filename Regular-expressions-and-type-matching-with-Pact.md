@@ -1,3 +1,5 @@
+Note: version 2 matching has been released, see docs [here](https://github.com/realestate-com-au/pact/wiki/v2-flexible-matching)
+ 
 # Regular expressions
 Sometimes you will have keys in a request or response with values that are hard to know beforehand - timestamps and generated IDs are two examples.
 
