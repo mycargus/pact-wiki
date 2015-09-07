@@ -34,4 +34,4 @@ Pact.service_consumer "Zoo App" do
 end
 ```
 
-To start the standalone pact mock service in v2 matching mode, specify `--pact-specification-version 2` in the startup options.
+To start the standalone pact mock service in v2 matching mode, specify `--pact-specification-version 2.0.0` in the startup options.
