@@ -1,3 +1,4 @@
+* [Consumer-driven contracts with Pact and PHP](http://www.andykelk.net/tech/consumer-driven-contracts-with-pact-and-php) - 9 Sep 2015
 * [Pacts to the rescue!](http://www.infoq.com/presentations/pact) API Days (Video) - Feb 2015
 * [Martin Fowler's Microservices resource guide](http://martinfowler.com/microservices/) - July 2015
 * [Enter the Pact Matrix. Or, how to decouple the release cycles of your microservices.](http://techblog.realestate.com.au/enter-the-pact-matrix-or-how-to-decouple-the-release-cycles-of-your-microservices/) - Dec 2014
