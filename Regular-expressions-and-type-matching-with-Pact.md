@@ -19,7 +19,7 @@ animal_service.given("an alligator named Mary exists").
     headers: {"Content-Type" => "application/json"},
     body: {
       name: "Mary",
-      dateOfBirth: Pact::Term.new(
+      dateOfBirth: Pact.term(
         generate: "02/11/2013", 
         matcher: /\d{2}\/\d{2}\/\d{4}/)
     })
@@ -35,7 +35,7 @@ animal_service.given("an alligator named Mary exists").
   with(
     method: "get",
     path: "/alligators/Mary", 
-    query: Pact::Term.new(
+    query: Pact.term(
       generate: "transactionId=1234", 
       matcher: /transactionId=\d{4}/),
   will_respond_with(
@@ -64,7 +64,7 @@ animal_service.given("an alligator named Mary exists").
     status: 200,
     headers: {"Content-Type" => "application/json"},
     body: {
-      Pact::SomethingLike.new(
+      Pact.like(
         name: "Mary",
         age: 73
       )
@@ -83,7 +83,7 @@ animal_service.given("an alligator named Mary exists").
     path: "/alligators/Mary", 
     headers: {"Accept" => "application/json"},
     body: {
-      age: SomethingLike.new(10)
+      age: Pact.like(10)
     }).
   will_respond_with(
     status: 200,
