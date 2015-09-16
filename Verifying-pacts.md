@@ -67,6 +67,8 @@ Pact.service_provider "My Service Provider" do
 end
 ```
 
+### With basic auth
+
 To verify a pact from a URL that requires basic auth, add username and password options:
 
 ```ruby
