@@ -93,6 +93,10 @@ The pact authors' experience with using pacts to test microservices has been tha
 
 However, if you have a large and complex provider, you might decide to stub some of your application code. You will definitely need to stub calls to downstream systems or to set up error scenarios. Make sure, if you stub, that you don't stub the code that actually parses the request and pulls the expected data out, because otherwise the consumer could be sending absolute rubbish, and the pact:verify won't fail because that code won't get executed. If the validation happens when you insert a record into the datasource, either don't stub anything, or rethink your validation code.
 
+### How can I extend Pact for different content types?
+
+Read this: [[https://github.com/realestate-com-au/pact/wiki/How-to-extend-Pact-for-different-content-types]]
+
 ### How can I verify a pact against a non-ruby provider?
 
 You can verify a pact against any running server, regardless of language, using [pact-provider-proxy](https://github.com/bethesque/pact-provider-proxy). There is also native support for the [JVM and .net](https://github.com/realestate-com-au/pact/wiki#implementations-in-other-languages).
